@@ -15,7 +15,7 @@
  qt5-d
 
 ############### Installation #######################
- cd /no && mkdir OpencvInstall && cd OpencvInstall                      \
+ cd /no && mkdir OpencvInstall && cd OpencvInstall                       \
  && git clone https://github.com/Itseez/opencv.git                       \
  && git clone  https://github.com/Itseez/opencv_contrib.git              \
  && cd opencv && mkdir build && cd build                                 \
