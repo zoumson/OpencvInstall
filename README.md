@@ -32,6 +32,16 @@
 
 Opencv libraries for c++ installation explained 
 
+### Quick installation
+* Run as administrator 
+ ```sh
+ sudo su
+ ```
+ * Clone this repository and run `install.sh`
+ ```sh
+ git clone https://github.com/zoumson/OpencvInstall.git && cd OpencvInstall && chmod +x install.sh && ./install
+ 
+ ```
 <!--Built with -->
 ### Built With
 
