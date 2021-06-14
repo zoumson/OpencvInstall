@@ -67,7 +67,7 @@ Read, show, clone image in opencv
 * [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config/)
 * [ffmpeg](http://ffmpeg.org/)
 * [numpy](https://numpy.org/)
-* [jpeg](https://jpegclub.org/reference/
+* [jpeg](https://jpegclub.org/reference/)
 * [png](http://www.libpng.org/pub/png/libpng.html)
 * [tiff](https://www.adobe.io/open/standards/TIFF.html)
 * [1394-based digital camera specifications](https://damien.douxchamps.net/ieee1394/libdc1394/)
