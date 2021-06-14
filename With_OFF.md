@@ -1,8 +1,8 @@
-| Options  | Default  |                 | Options  | Default  | 
-| :------------: |:---------------:|    | :------------: |:---------------:|  
-| WITH_ARAVIS     | OFF |               | WITH_ARAVIS     | OFF | 
-| col 2 is      | centered        |     | col 2 is      | centered        |   
-| zebra stripes | are neat        |     | zebra stripes | are neat        |    
+| Options  | Default  |                  Options  | Default  | 
+| :------------: |:---------------:|    :------------: |:---------------:|  
+| WITH_ARAVIS     | OFF |               WITH_ARAVIS     | OFF | 
+| col 2 is      | centered        |     col 2 is      | centered        |   
+| zebra stripes | are neat        |     zebra stripes | are neat        |    
 
 1. Include Aravis GigE support
 ```sh
