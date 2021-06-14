@@ -160,7 +160,6 @@ This is an example of how to list things you need to use the software and how to
  ..
  ``` 
  * `CMAKE_INSTALL_PREFIX` specifies the installation path, by default if not set it's `/usr/local`
- * Install opencv libraries
  * Run `make`
  ```sh
  sudo cd /opt/OpencvInstall/opencv/build && sudo make -j4
