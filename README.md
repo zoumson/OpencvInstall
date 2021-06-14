@@ -1,17 +1,4 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
-<!--
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-[![Github][github-shield]][github.com/zoumson?tab=repositories]
-[![Stack Overflow][stackoverflow-shield]][stackoverflow.com/users/11175375/adam]
-[![Leetcode][leetcode-shield]][eetcode.com/Hard_Code/]
--->
 ## Opencv Installation
 
 <!-- TABLE OF CONTENTS -->
@@ -25,21 +12,12 @@
       </ul>
     </li>
     <li>
-      <a href="#file-structure">Files Structure</a>
-      <ul>
-        <li><a href="#folders">Folders</a></li>
-        <li><a href="#entire-files-structure">Entire Files Structure</a></li>
-      </ul>
-    </li>
-    <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -52,7 +30,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 Opencv libraries for c++ installation explained 
 
 <!--Built with -->
@@ -86,22 +63,6 @@ Opencv libraries for c++ installation explained
 * [opencv](https://opencv.org/)
 
 <br>
-
-## File Structure
-
-### Folders
-
-* [include/](include/): c++ header files.
-* [src/](src/): c++ definitions.
-
-
-### Entire Files Structure 
-
-
-```
-
-
-```
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -145,7 +106,8 @@ This is an example of how to list things you need to use the software and how to
  ```
  * Get opencv source files from github
  ```sh
- sudo cd /opt/OpencvInstall && sudo git clone https://github.com/Itseez/opencv.git  \
+ sudo cd /opt/OpencvInstall                                 \
+ && sudo git clone https://github.com/Itseez/opencv.git     \
  && sudo clone  https://github.com/Itseez/opencv_contrib.git
  ```
  * Create a `build` directory in `/opt/OpencvInstall/opencv`
@@ -154,9 +116,10 @@ This is an example of how to list things you need to use the software and how to
  ```
  * Run `cmake` with argument `CMAKE_INSTALL_PREFIX` `CMAKE_BUILD_TYPE` and  `OPENCV_EXTRA_MODULES_PATH`, don't      forget `..` at the end
  ```sh
- sudo cd /opt/OpencvInstall/opencv/build  \
- && sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local \
- -D OPENCV_EXTRA_MODULES_PATH=/opt/OpencvInstall/opencv_contrib/modules       \
+ sudo cd /opt/OpencvInstall/opencv/build                                 \
+ && sudo cmake -D CMAKE_BUILD_TYPE=RELEASE 
+ -D CMAKE_INSTALL_PREFIX=/usr/local                                      \
+ -D OPENCV_EXTRA_MODULES_PATH=/opt/OpencvInstall/opencv_contrib/modules  \
  ..
  ``` 
  * `CMAKE_INSTALL_PREFIX` specifies the installation path, by default if not set it's `/usr/local`
@@ -172,7 +135,20 @@ This is an example of how to list things you need to use the software and how to
  ```sh
  sudo cd /opt/OpencvInstall/opencv/build && sudo ldconfig
  ```
- * Install system opencv related configuration package
+* Default build configuration is here
+* By deafault `VTK` is included
+* Customized build items are here
+* Custom installation with  `TTB` and `openGL`
+ ```sh
+ sudo cd /opt/OpencvInstall/opencv/build                                 \
+ && sudo cmake -D CMAKE_BUILD_TYPE=RELEASE                               \
+ -D CMAKE_INSTALL_PREFIX=/usr/local                                      \
+ -D OPENCV_EXTRA_MODULES_PATH=/opt/OpencvInstall/opencv_contrib/modules  \
+ -D WITH_TBB=ON -D BUILD_TBB=ON -D WITH_OPENGL:BOOL=ON                   \
+ ..                                                                      \
+ && make -j4 && make install && ldconfig
+ ``` 
+  * Install system opencv related configuration package
  ```sh
  sudo apt install libopencv-dev
  ```
@@ -188,31 +164,11 @@ This is an example of how to list things you need to use the software and how to
  ```sh
  sudo pkg-config --modversion opencv4
  ```
-* Default build configuration is here
-* By deafault `VTK` is included
-* Customized build items are here
-* Custom installation with  `TTB` and `openGL`
- ```sh
- sudo cd /opt/OpencvInstall/opencv/build  \
- && sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local \
- -D OPENCV_EXTRA_MODULES_PATH=/opt/OpencvInstall/opencv_contrib/modules       \
- -D WITH_TBB=ON -D BUILD_TBB=ON -D WITH_OPENGL:BOOL=ON
- .. \
- && make -j4 && make install && ldconfig
- ``` 
   * Uninstall opencv from `/opt/OpencvInstall/opencv/build`
  ```sh
  sudo cd /opt/OpencvInstall/opencv/build && sudo make uninstall 
  ```
 
-<!-- USAGE EXAMPLES -->
-### Usage
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-All the headers files are well docummented, read through the comments
 
 <!-- CONTRIBUTING -->
 ## Contributing
