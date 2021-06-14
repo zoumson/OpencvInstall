@@ -12,7 +12,7 @@
 [![Stack Overflow][stackoverflow-shield]][stackoverflow.com/users/11175375/adam]
 [![Leetcode][leetcode-shield]][eetcode.com/Hard_Code/]
 -->
-## Basic opencv image manipulation
+## Opencv Installation
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -53,8 +53,7 @@
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-
-Read, show, clone image in opencv
+Opencv libraries for c++ installation explained 
 
 <!--Built with -->
 ### Built With
@@ -62,7 +61,8 @@ Read, show, clone image in opencv
 <br>
 
 * [cmake](https://cmake.org/)
-* [gnu](https://www.gnu.org/)
+* [gcc](https://gcc.gnu.org/)
+* [git](https://git-scm.com/)
 * [gtk](https://www.gtk.org/)
 * [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config/)
 * [ffmpeg](http://ffmpeg.org/)
@@ -99,142 +99,117 @@ Read, show, clone image in opencv
 
 
 ```
-.
-├── CMakeLists.txt
-├── include
-├── README.md
-├── ressource
-│   └── happy.jpeg
-└── src
-    └── imageBasics.cpp
-
 
 
 ```
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is a sample code of how you may use  the opencv basic libs.
+This is a tutorial for installing opencv on `ubuntu`. 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* cmake
-  ```sh
-  sudo apt-get install cmake
-  ```
-* [Install](https://askubuntu.com/questions/342202/failed-to-load-module-canberra-gtk-module-but-already-installed) `gtk` and `gtk3` module to access `canberra-gtk-module` used by `opencv imshow`
- 
-  ```sh
-  sudo apt install libcanberra-gtk-module libcanberra-gtk3-module
-  ```
- * Install first `opencv4` cpp libraries 
-
-
+* Update system
  ```sh
  sudo apt-get update
  ```
+* Upgrade system
  ```sh
  sudo apt-get upgrade
  ```
- 
- ```sh
- sudo apt-get install build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+ * Install the `build-essential` which includes `gcc`, `g++` and `make`
+  ```sh
+ sudo apt install build-essential
  ```
- ```sh
- sudo apt-get install  python3-numpy libtbb2 libtbb-dev
- ```
- ```sh
- sudo apt-get install libjpeg-dev libpng-dev libtiff5-dev libdc1394-22-dev libeigen3-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev sphinx-common       libtbb-dev yasm libfaac-dev libopencore-amrnb-dev libopencore-amrwb-dev libopenexr-dev libgstreamer-plugins-base1.0-dev libavutil-dev libavfilter-dev             libavresample-dev
- ```
- 
- ```sh
- cd /opt
- ```
- ```sh
- git clone https://github.com/Itseez/opencv.git
- ```
- 
- ```sh
- git clone https://github.com/Itseez/opencv_contrib.git
- ```
- ```
- cd opencv
- ```
- ```
- mkdir release
- ```
- ```
- cd release
+ ### Dependencies
+   ```sh
+ sudo apt-get install libgtk-3-dev pkg-config ffmpeg python-numpy \
+ libjpeg-dev libpng-dev libtiff-dev libdc1394-22 ibeigen3-dev     \
+ libtheora-dev ibvorbis-dev libxvidcore-dev libx264-dev           \
+ sphinx-common yasm libfaac-dev libopencore-amrnb-dev             \
+ libopencore-amrwb-dev libopenexr-dev                             \
+ libgstreamer-plugins-base1.0-dev 
+
  ```
  
  
+  ### Installation
+  
+ * Create a directory `OpencvInstall` in `/opt`
+ 
  ```sh
- cmake -D BUILD_TIFF=ON -D WITH_CUDA=OFF -D ENABLE_AVX=OFF -D WITH_OPENGL=OFF -D WITH_OPENCL=OFF -D WITH_IPP=OFF -D WITH_TBB=ON -D BUILD_TBB=ON 
- -D WITH_EIGEN=OFF   -D WITH_V4L=OFF -D WITH_VTK=OFF -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF -D CMAKE_BUILD_TYPE=RELEASE 
- -D CMAKE_INSTALL_PREFIX=/usr/local -D    OPENCV_EXTRA_MODULES_PATH=/opt/opencv_contrib/modules /opt/opencv/
+ sudo cd /opt && mkdir OpencvInstall && cd OpencvInstall
  ```
+ * Get opencv source files from github
+ ```sh
+ sudo cd /opt/OpencvInstall && sudo git clone https://github.com/Itseez/opencv.git  \
+ && sudo clone  https://github.com/Itseez/opencv_contrib.git
  ```
- make -j4
+ * Create a `build` directory in `/opt/OpencvInstall/opencv`
+ ```sh
+ sudo cd /opt/OpencvInstall/opencv && sudo mkdir build && sudo cd build
  ```
+ * Run `cmake` with argument `CMAKE_INSTALL_PREFIX` `CMAKE_BUILD_TYPE` and  `OPENCV_EXTRA_MODULES_PATH`, don't      forget `..` at the end
+ ```sh
+ sudo cd /opt/OpencvInstall/opencv/build  \
+ && sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local \
+ -D OPENCV_EXTRA_MODULES_PATH=/opt/OpencvInstall/opencv_contrib/modules       \
+ ..
+ ``` 
+ * `CMAKE_INSTALL_PREFIX` specifies the installation path, by default if not set it's `/usr/local`
+ * Install opencv libraries
+ * Run `make`
+ ```sh
+ sudo cd /opt/OpencvInstall/opencv/build && sudo make -j4
+ ``` 
+ * Install the opencv libraries in the installation path
+ ```sh
+ sudo cd /opt/OpencvInstall/opencv/build && sudo make install
+ ``` 
+ * Run `ldconfig`
+ ```sh
+ sudo cd /opt/OpencvInstall/opencv/build && sudo ldconfig
  ```
- make install
- ```
- ```
- ldconfig
- ```
- ```
+ * Install system opencv related configuration package
+ ```sh
  sudo apt install libopencv-dev
  ```
- check opencv path
+ * check opencv path
+ ```sh
+ sudo pkg-config --cflags opencv4
  ```
- pkg-config --cflags opencv4
+ * check opencv libs
+ ```sh
+ sudo pkg-config --libs opencv4
  ```
- check opencv libs
+ * check opencv version
+ ```sh
+ sudo pkg-config --modversion opencv4
  ```
-  pkg-config --libs opencv4
+* Default build configuration is here
+* By deafault `VTK` is included
+* Customized build items are here
+* Custom installation with  `TTB` and `openGL`
+ ```sh
+ sudo cd /opt/OpencvInstall/opencv/build  \
+ && sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local \
+ -D OPENCV_EXTRA_MODULES_PATH=/opt/OpencvInstall/opencv_contrib/modules       \
+ -D WITH_TBB=ON -D BUILD_TBB=ON -D WITH_OPENGL:BOOL=ON
+ .. \
+ && make -j4 && make install && ldconfig
+ ``` 
+  * Uninstall opencv from `/opt/OpencvInstall/opencv/build`
+ ```sh
+ sudo cd /opt/OpencvInstall/opencv/build && sudo make uninstall 
  ```
- check opencv version
- ```
-  pkg-config --modversion opencv4
- ```
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/zoumson/Image.git
-   ```
-2. Go to the project directory source
-   ```sh
-   cd Image
-   ```
-3. Create empty directories `build`, and `bin`
-   ```sh
-   mkdir build &&  mkdir bin 
-   ```
-5. Generate the exectutable `imageBasics` and move it to `bin`
-   ```sh
-   cd build && cmake .. && make -j4 && cd ..
-   ```
 
 <!-- USAGE EXAMPLES -->
 ### Usage
-1. Run for matrix usage 
-   ```sh
-   ./bin/imageBasics ./ressource/happy.jpeg
-   ```
-2. Output
-   ```sh
 
-   ```
 
-4. Back to the initial file structure configuration
-   ```sh
-   rm -r bin build 
-   ```
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -265,7 +240,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Adama Zouma - <!-- [@your_twitter](https://twitter.com/your_username) -->- stargue49@gmail.com
 
-Project Link: [https://github.com/zoumson/Image](https://github.com/zoumson/Image.git)
+Project Link: [https://github.com/zoumson/OpencvInstall](https://github.com/zoumson/OpencvInstall.git)
 
 
 
