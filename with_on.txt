@@ -1,0 +1,93 @@
+
+1. // Include IEEE1394 support
+WITH_1394:BOOL=ON
+
+2. // Enable ADE framework (required for Graph API module)
+WITH_ADE:BOOL=ON
+
+
+3. // Include Eigen2/Eigen3 support
+WITH_EIGEN:BOOL=ON
+
+4. // Include FFMPEG support
+WITH_FFMPEG:BOOL=ON
+
+5. // Include Gstreamer support
+WITH_GSTREAMER:BOOL=ON
+
+6. // Include GTK support
+WITH_GTK:BOOL=ON
+
+7. // Include HDR support
+WITH_IMGCODEC_HDR:BOOL=ON
+
+8. // Include PFM formats support
+WITH_IMGCODEC_PFM:BOOL=ON
+
+9. // Include PNM (PBM,PGM,PPM) and PAM formats support
+WITH_IMGCODEC_PXM:BOOL=ON
+
+10. // Include SUNRASTER support
+WITH_IMGCODEC_SUNRASTER:BOOL=ON
+
+11. // Include Intel IPP support
+WITH_IPP:BOOL=ON
+
+12. // Include Intel ITT support
+WITH_ITT:BOOL=ON
+
+13. // Include JPEG2K support (Jasper)
+WITH_JASPER:BOOL=ON
+
+14. // Include JPEG support
+WITH_JPEG:BOOL=ON
+
+15. // Include Lapack library support
+WITH_LAPACK:BOOL=ON
+
+
+16. // Include OpenCL Runtime support
+WITH_OPENCL:BOOL=ON
+
+17. // Include AMD OpenCL BLAS library support
+WITH_OPENCLAMDBLAS:BOOL=ON
+
+18. // Include AMD OpenCL FFT library support
+WITH_OPENCLAMDFFT:BOOL=ON
+
+19. // Include ILM support via OpenEXR
+WITH_OPENEXR:BOOL=ON
+
+20. // Include JPEG2K support (OpenJPEG)
+WITH_OPENJPEG:BOOL=ON
+
+21. // Include PNG support
+WITH_PNG:BOOL=ON
+
+22. // Enable libprotobuf
+WITH_PROTOBUF:BOOL=ON
+
+23. // Use pthreads-based parallel_for
+WITH_PTHREADS_PF:BOOL=ON
+
+24. // Include library QR-code decoding
+WITH_QUIRC:BOOL=ON
+
+25. // Include TIFF support
+WITH_TIFF:BOOL=ON
+
+26. // Include Video 4 Linux support
+WITH_V4L:BOOL=ON
+
+27. // Include VA support
+WITH_VA:BOOL=ON
+
+28. // Include Intel VA-API/OpenCL support
+WITH_VA_INTEL:BOOL=ON
+
+29. // Include VTK library support (and build opencv_viz module eiher)
+WITH_VTK:BOOL=ON
+
+30. // Include WebP support
+WITH_WEBP:BOOL=ON
+

@@ -1,0 +1,51 @@
+// Enable hardening of the resulting binaries (against security attacks, detects memory corruption, etc)
+ENABLE_BUILD_HARDENING:BOOL=OFF
+
+// Use ccache
+ENABLE_CCACHE:BOOL=ON
+
+// Fail build if actual configuration doesn't match requested (WITH_XXX != HAVE_XXX)
+ENABLE_CONFIG_VERIFICATION:BOOL=OFF
+
+// Enable coverage collection with  GCov
+ENABLE_COVERAGE:BOOL=OFF
+
+// Enable compiler options for fast math optimizations on FP computations (not recommended)
+ENABLE_FAST_MATH:BOOL=OFF
+
+// Add target with Python flake8 checker
+ENABLE_FLAKE8:BOOL=OFF
+
+// Enable GNU STL Debug mode (defines _GLIBCXX_DEBUG)
+ENABLE_GNU_STL_DEBUG:BOOL=OFF
+
+// Collect implementation data on function call
+ENABLE_IMPL_COLLECTION:BOOL=OFF
+
+// Instrument functions to collect calls trace and performance
+ENABLE_INSTRUMENTATION:BOOL=OFF
+
+// Enable Link Time Optimization
+ENABLE_LTO:BOOL=OFF
+
+// Show all warnings even if they are too noisy
+ENABLE_NOISY_WARNINGS:BOOL=OFF
+
+// Enable -fomit-frame-pointer for GCC
+ENABLE_OMIT_FRAME_POINTER:BOOL=ON
+
+// Generate position independent code (necessary for shared libraries)
+ENABLE_PIC:BOOL=ON
+
+// Use precompiled headers
+ENABLE_PRECOMPILED_HEADERS:BOOL=OFF
+
+// Enable profiling in the GCC compiler (Add flags: -g -pg)
+ENABLE_PROFILING:BOOL=OFF
+
+// Add target with Pylint checks
+ENABLE_PYLINT:BOOL=OFF
+
+// Solution folder in Visual Studio or in other IDEs
+ENABLE_SOLUTION_FOLDERS:BOOL=OFF
+
