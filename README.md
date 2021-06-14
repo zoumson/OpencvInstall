@@ -144,7 +144,7 @@ This is an example of how to list things you need to use the software and how to
  && sudo git clone https://github.com/Itseez/opencv.git                  \
  && sudo clone  https://github.com/Itseez/opencv_contrib.git             \
  && sudo cd opencv && sudo mkdir build && sudo cd build                  \
- sudo cd /opt/OpencvInstall/opencv/build                                 \
+ && sudo cd /opt/OpencvInstall/opencv/build                                 \
  && sudo cmake -D CMAKE_BUILD_TYPE=RELEASE                               \
  -D CMAKE_INSTALL_PREFIX=/usr/local                                      \
  -D OPENCV_EXTRA_MODULES_PATH=/opt/OpencvInstall/opencv_contrib/modules  \
