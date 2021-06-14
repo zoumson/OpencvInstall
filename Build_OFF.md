@@ -1,33 +1,43 @@
-1. // Build CUDA modules stubs when no CUDA SDK
+1. Build CUDA modules stubs when no CUDA SDK
+```sh
 BUILD_CUDA_STUBS:BOOL=OFF
-
-2. // Create build rules for OpenCV Documentation
+```
+2. Create build rules for OpenCV Documentation
+```sh
 BUILD_DOCS:BOOL=OFF
-
-3. // Build all examples
+```
+3. Build all examples
+```sh
 BUILD_EXAMPLES:BOOL=OFF
-
-4. // Build libjasper from source
+```
+4. Build libjasper from source
+```sh
 BUILD_JASPER:BOOL=OFF
-
-5. // Build libjpeg from source
+```
+5. Build libjpeg from source
+```sh
 BUILD_JPEG:BOOL=OFF
-
-6. // Build only listed modules (comma-separated, e.g. 'videoio,dnn,ts')
+```
+6. Build only listed modules (comma-separated, e.g. 'videoio,dnn,ts')
+```sh
 BUILD_LIST:STRING=
-
-7. // Build openexr from source
+```
+7. Build openexr from source
+```sh
 BUILD_OPENEXR:BOOL=OFF
-
-8. // Build OpenJPEG from source
+```
+8. Build OpenJPEG from source
+```sh
 BUILD_OPENJPEG:BOOL=OFF
-
-9. // Build libpng from source
+```
+9. Build libpng from source
+```sh
 BUILD_PNG:BOOL=OFF
-
-10. // Download and build TBB from source
+```
+10.Download and build TBB from source
+```sh
 BUILD_TBB:BOOL=OFF
-
+```
 11. // Build libtiff from source
 BUILD_TIFF:BOOL=OFF
 
