@@ -34,30 +34,39 @@ BUILD_OPENJPEG:BOOL=OFF
 ```sh
 BUILD_PNG:BOOL=OFF
 ```
-10.Download and build TBB from source
+10. Download and build TBB from source
 ```sh
 BUILD_TBB:BOOL=OFF
 ```
-11. // Build libtiff from source
+11. Build libtiff from source
+```sh
 BUILD_TIFF:BOOL=OFF
-
-12. // Use symlinks instead of files copying during build (and !!INSTALL!!)
+```
+12. Use symlinks instead of files copying during build (and !!INSTALL!!)
+```sh
 BUILD_USE_SYMLINKS:BOOL=OFF
-
-13. // Build WebP from source
+```
+13. Build WebP from source
+```sh
 BUILD_WEBP:BOOL=OFF
-
-14. // Include debug info into release binaries ('OFF' means default settings)
+```
+14. Include debug info into release binaries ('OFF' means default settings)
+```sh
 BUILD_WITH_DEBUG_INFO:BOOL=OFF
-
-15. // Enables dynamic linking of IPP (only for standalone IPP)
+```
+15. Enables dynamic linking of IPP (only for standalone IPP)
+```sh
 BUILD_WITH_DYNAMIC_IPP:BOOL=OFF
-
-16. // Build zlib from source
+```
+16. Build zlib from source
+```sh
 BUILD_ZLIB:BOOL=OFF
-
-17. // Build JavaScript bindings by Emscripten
+```
+17. Build JavaScript bindings by Emscripten
+```sh
 BUILD_opencv_js:BOOL=OFF
-
-18. // Include opencv_world module into the OpenCV build
+```
+18. Include opencv_world module into the OpenCV build
+```sh
 BUILD_opencv_world:BOOL=OFF
+```
