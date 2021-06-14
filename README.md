@@ -73,17 +73,21 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
+* Run as administrator 
+ ```sh
+ sudo su
+ ```
 * Update system
  ```sh
- sudo apt-get update
+ apt-get update
  ```
 * Upgrade system
  ```sh
- sudo apt-get upgrade
+ apt-get upgrade
  ```
  * Install the `build-essential` which includes `gcc`, `g++` and `make`
   ```sh
- sudo apt install build-essential
+ apt install build-essential
  ```
  ### Dependencies
  ```sh
@@ -102,7 +106,7 @@ This is an example of how to list things you need to use the software and how to
  * Create a directory `OpencvInstall` in `/opt`
  
  ```sh
- sudo cd /opt && mkdir OpencvInstall && cd OpencvInstall
+ cd /opt && mkdir OpencvInstall && cd OpencvInstall
  ```
  * Get opencv source files from github
  ```sh
@@ -153,25 +157,25 @@ This is an example of how to list things you need to use the software and how to
  && make -j4 && make install && ldconfig                                 \
  && apt install libopencv-dev                                       
  ``` 
-  * Install system opencv related configuration package
+ * Install opencv configuration package 
  ```sh
- sudo apt install libopencv-dev
+ apt install libopencv-dev 
  ```
- * check opencv path
+ * Check opencv path
  ```sh
- sudo pkg-config --cflags opencv4
+ pkg-config --cflags opencv4
  ```
- * check opencv libs
+ * Check opencv libs
  ```sh
- sudo pkg-config --libs opencv4
+ pkg-config --libs opencv4
  ```
- * check opencv version
+ * Check opencv version
  ```sh
- sudo pkg-config --modversion opencv4
+ pkg-config --modversion opencv4
  ```
   * Uninstall opencv from `/opt/OpencvInstall/opencv/build`
  ```sh
- sudo cd /opt/OpencvInstall/opencv/build && sudo make uninstall 
+ cd /opt/OpencvInstall/opencv/build && sudo make uninstall 
  ```
 
 
