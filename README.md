@@ -86,16 +86,16 @@ This is an example of how to list things you need to use the software and how to
  sudo apt install build-essential
  ```
  ### Dependencies
-   ```sh
- sudo apt-get install libgtk-3-dev pkg-config ffmpeg python-numpy \
- libjpeg-dev libpng-dev libtiff-dev libdc1394-22 ibeigen3-dev     \
- libtheora-dev ibvorbis-dev libxvidcore-dev libx264-dev           \
- sphinx-common yasm libfaac-dev libopencore-amrnb-dev             \
- libopencore-amrwb-dev libopenexr-dev                             \
- libgstreamer-plugins-base1.0-dev 
-
+ ```sh
+ apt-get install libgtk-3-dev pkg-config ffmpeg python-numpy            \
+ libjpeg-dev libpng-dev libtiff-dev libdc1394-22 libeigen3-dev          \
+ libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev
  ```
- 
+ ```sh
+ apt-get install sphinx-common yasm libfaac-dev libopencore-amrnb-dev   \
+ libopencore-amrwb-dev libopenexr-dev                                   \
+ libgstreamer-plugins-base1.0-dev 
+ ```
  
   ### Installation
   
