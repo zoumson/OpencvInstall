@@ -1,9 +1,3 @@
-| Options  | Default  |                  Options  | Default  |               Options  | Default                 |  Options  | Default 
-| :------------: |:---------------:|    :------------: |:---------------:|  :------------: |:---------------:|   :------------: |:---------------:| 
-| WITH_ARAVIS     | OFF |               WITH_ARAVIS     | OFF |             WITH_ARAVIS     | OFF |               WITH_ARAVIS     | OFF | 
-| col 2 is      | centered        |     col 2 is      | centered        |   WITH_ARAVIS     | OFF |               WITH_ARAVIS     | OFF | 
-| zebra stripes | are neat        |     zebra stripes | are neat        |   WITH_ARAVIS     | OFF |               WITH_ARAVIS     | OFF | 
-
 1. Include Aravis GigE support
 ```sh
 WITH_ARAVIS:BOOL=OFF
