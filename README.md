@@ -74,7 +74,7 @@ Read, show, clone image in opencv
 * [eigen](https://www.eigen.tuxfamily.org)
 * [theora](https://www.theora.org/)
 * [vorbis](https://xiph.org/vorbis/doc/libvorbis/index.html)
-* [Xvidcore](https://www.xvid.com/)
+* [xvidcore](https://www.xvid.com/)
 * [x264](https://www.videolan.org/developers/x264.html)
 * [sphinx](https://www.sphinx-doc.org/en/master/)
 * [yasm](https://yasm.tortall.net/)
@@ -82,7 +82,7 @@ Read, show, clone image in opencv
 * [adaptive multi rate speech codec](https://packages.debian.org/sid/libopencore-amrnb-dev)
 * [adaptive multi-rate-wideband speech codec](https://packages.debian.org/sid/libopencore-amrwb-dev)
 * [openexr](https://www.openexr.com/)
-* [GStreamer](https://gstreamer.freedesktop.org/)
+* [gstreamer](https://gstreamer.freedesktop.org/)
 * [opencv](https://opencv.org/)
 
 <br>
