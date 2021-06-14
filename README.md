@@ -140,18 +140,18 @@ This is an example of how to list things you need to use the software and how to
 * Customized build items are here
 * Custom installation with  `TTB`, `exemples` and `openGL`
  ```sh
- sudo cd /opt && mkdir OpencvInstall && cd OpencvInstall                 \
- && sudo git clone https://github.com/Itseez/opencv.git                  \
- && sudo clone  https://github.com/Itseez/opencv_contrib.git             \
- && sudo cd opencv && sudo mkdir build && sudo cd build                  \
- && sudo cmake -D CMAKE_BUILD_TYPE=RELEASE                               \
+ cd /opt && mkdir OpencvInstall && cd OpencvInstall                 \
+ && git clone https://github.com/Itseez/opencv.git                  \
+ && clone  https://github.com/Itseez/opencv_contrib.git             \
+ && cd opencv && mkdir build && cd build                  \
+ && cmake -D CMAKE_BUILD_TYPE=RELEASE                               \
  -D CMAKE_INSTALL_PREFIX=/usr/local                                      \
  -D OPENCV_EXTRA_MODULES_PATH=/opt/OpencvInstall/opencv_contrib/modules  \
  -D WITH_TBB=ON -D BUILD_TBB=ON -D WITH_OPENGL:BOOL=ON                   \
  -D BUILD_EXAMPLES=ON                                                    \
  ..                                                                      \
  && make -j4 && make install && ldconfig                                 \
- && sudo apt install libopencv-dev                                       
+ && apt install libopencv-dev                                       
  ``` 
   * Install system opencv related configuration package
  ```sh
