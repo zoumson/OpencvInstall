@@ -7,12 +7,9 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
-      <a href="#quick-installation">Quick installation</a>
+      <a href="#quick-installation">Quick Installation</a>
     </li>    
     <li>
       <a href="#step-by-step-installation">Step-by-Step Installation</a>
@@ -22,8 +19,7 @@
         <li><a href="#dependencies">Dependencies</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
-    </li>
-    
+    </li>   
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
