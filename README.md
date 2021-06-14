@@ -12,12 +12,18 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#quick-installation">Quick installation</a>
+    </li>    
+    <li>
+      <a href="#step-by-step-installation">Step-by-Step Installation</a>
       <ul>
+        <li><a href="#built-with">Built With</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#dependencies">Dependencies</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -32,7 +38,7 @@
 
 Opencv libraries for c++ installation explained 
 
-### Quick installation
+## Quick Installation
 * Run as administrator 
  ```sh
  sudo su
@@ -42,6 +48,7 @@ Opencv libraries for c++ installation explained
  git clone https://github.com/zoumson/OpencvInstall.git && cd OpencvInstall && chmod +x install.sh && ./install
  
  ```
+## Step-by-Step Installation 
 <!--Built with -->
 ### Built With
 
@@ -70,15 +77,11 @@ Opencv libraries for c++ installation explained
 * [adaptive multi-rate-wideband speech codec](https://packages.debian.org/sid/libopencore-amrwb-dev)
 * [openexr](https://www.openexr.com/)
 * [gstreamer](https://gstreamer.freedesktop.org/)
+* [qt](https://wiki.qt.io/Install_Qt_5_on_Ubuntu)
+* [opengl](https://www.opengl.org/)
 * [opencv](https://opencv.org/)
 
 <br>
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is a tutorial for installing opencv on `ubuntu`. 
-To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
@@ -152,24 +155,6 @@ This is an example of how to list things you need to use the software and how to
  ```sh
  sudo cd /opt/OpencvInstall/opencv/build && sudo ldconfig
  ```
-* Default build configuration is here
-* By deafault `VTK` is included
-* Customized build items are here
-* Custom installation with  `TTB`, `exemples` and `openGL`
- ```sh
- cd /opt && mkdir OpencvInstall && cd OpencvInstall                      \
- && git clone https://github.com/Itseez/opencv.git                       \
- && git clone  https://github.com/Itseez/opencv_contrib.git              \
- && cd opencv && mkdir build && cd build                                 \
- && cmake -D CMAKE_BUILD_TYPE=RELEASE                                    \
- -D CMAKE_INSTALL_PREFIX=/usr/local                                      \
- -D OPENCV_EXTRA_MODULES_PATH=/opt/OpencvInstall/opencv_contrib/modules  \
- -D WITH_TBB=ON -D BUILD_TBB=ON -D WITH_OPENGL:BOOL=ON                   \
- -D BUILD_EXAMPLES=ON                                                    \
- ..                                                                      \
- && make -j4 && make install && ldconfig                                 \
- && apt install libopencv-dev                                       
- ``` 
  * Install opencv configuration package 
  ```sh
  apt install libopencv-dev 
