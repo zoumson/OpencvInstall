@@ -100,7 +100,10 @@ This is an example of how to list things you need to use the software and how to
  libopencore-amrwb-dev libopenexr-dev                                   \
  libgstreamer-plugins-base1.0-dev 
  ```
- 
+  ```sh
+ apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev         \
+ qt5-default                                
+ ```
   ### Installation
   
  * Create a directory `OpencvInstall` in `/opt`
