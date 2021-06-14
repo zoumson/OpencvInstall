@@ -61,9 +61,29 @@ Read, show, clone image in opencv
 
 <br>
 
-* [opencv](https://opencv.org/)
 * [cmake](https://cmake.org/)
 * [gnu](https://www.gnu.org/)
+* [gtk](https://www.gtk.org/)
+* [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config/)
+* [ffmpeg](http://ffmpeg.org/)
+* [numpy](https://numpy.org/)
+* [jpeg](https://jpegclub.org/reference/
+* [png](http://www.libpng.org/pub/png/libpng.html)
+* [tiff](https://www.adobe.io/open/standards/TIFF.html)
+* [1394-based digital camera specifications](https://damien.douxchamps.net/ieee1394/libdc1394/)
+* [eigen](https://www.eigen.tuxfamily.org)
+* [theora](https://www.theora.org/)
+* [vorbis](https://xiph.org/vorbis/doc/libvorbis/index.html)
+* [Xvidcore](https://www.xvid.com/)
+* [x264](https://www.videolan.org/developers/x264.html)
+* [sphinx](https://www.sphinx-doc.org/en/master/)
+* [yasm](https://yasm.tortall.net/)
+* [faac](http://faac.sourceforge.net/)
+* [adaptive multi rate speech codec](https://packages.debian.org/sid/libopencore-amrnb-dev)
+* [adaptive multi-rate-wideband speech codec](https://packages.debian.org/sid/libopencore-amrwb-dev)
+* [openexr](https://www.openexr.com/)
+* [GStreamer](https://gstreamer.freedesktop.org/)
+* [opencv](https://opencv.org/)
 
 <br>
 
