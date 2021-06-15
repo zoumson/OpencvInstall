@@ -1,4 +1,12 @@
 #!/bin/bash
+############### Ubuntu 20.04 LTS #######################
+# Update system
+ apt-get update
+# Upgrade system
+ apt-get upgrade
+# Install the build-essential which includes gcc, g++ and make
+ apt install build-essential
+ 
 ############### Dependencies #######################
 # First group of dependencies
  apt-get install libgtk-3-dev pkg-config ffmpeg python-numpy             \
